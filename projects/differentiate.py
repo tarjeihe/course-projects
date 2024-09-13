@@ -2,10 +2,16 @@ import numpy as np
 
 
 def differentiate(u, dt):
-    pass
+    du = np.zeros(len(u)-1)
+    for i in len(du):
+        du[i] = (u[i+1]-u[i])/dt
+    return du
 
 def differentiate_vector(u, dt):
-    pass
+    du = np.zeros(len(u)-1)
+    for i in len(du):
+        du[i] = (u[i+1]-u[i])/dt
+    return du
 
 def test_differentiate():
     t = np.linspace(0, 1, 10)
