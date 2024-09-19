@@ -8,6 +8,7 @@ We use various boundary conditions.
 
 """
 import numpy as np
+import scipy.sparse as sparse
 import matplotlib.pyplot as plt
 import sympy as sp
 
@@ -138,7 +139,7 @@ class VibFD2(VibSolver):
     def __init__(self, Nt, T, w=0.35, I=1):
         VibSolver.__init__(self, Nt, T, w, I)
         T = T * w / np.pi
-        assert T.is_integer() and T % 2 == 0
+        #assert T.is_integer() and T % 2 == 0
 
     def __call__(self):
         u = np.zeros(self.Nt+1)
