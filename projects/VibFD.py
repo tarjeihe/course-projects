@@ -142,6 +142,7 @@ class VibFD2(VibSolver):
 
     def __call__(self):
         u = np.zeros(self.Nt+1)
+        u[0] = 9.0
         return u
 
 class VibFD3(VibSolver):
